@@ -22,9 +22,11 @@ if input
   case 2
     two_player_game = Game.new(Human.new("X"),Human.new("O"))
     two_player_game.play
+  else
+    ruby ./bin/tictactoe
 end
-      
-end 
+
+end
 
 zero_player_game = Game.new(Computer.new("X"),Computer.new("O"))
 single_player_game_plays_first = Game.new(Human.new("X"),Computer.new("O"))
