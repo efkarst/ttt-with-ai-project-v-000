@@ -75,10 +75,6 @@ class Game
     #user takes a turn
     def turn
       input = current_player.move(@board)
-<<<<<<< HEAD
-=======
-      index = input.to_i - 1
->>>>>>> e77259538409fa001e73c52723c8bb6e92ee872f
       if @board.valid_move?(input)
         @board.cells[input.to_i - 1] = current_player.token
         @board.display
