@@ -28,6 +28,10 @@ class Board
 
   def turn_count
     @cells.count{|c| c == "X" || c == "O"}
+<<<<<<< HEAD
+=======
+    binding.pry
+>>>>>>> e77259538409fa001e73c52723c8bb6e92ee872f
   end
 
   def taken?(input)

@@ -2,6 +2,7 @@ require 'pry'
 module Players
   class Computer < Player
       def move(board)
+<<<<<<< HEAD
         puts "This is turn #{board.turn_count}"
 
         case board.turn_count
@@ -41,6 +42,24 @@ module Players
       #  else
       #    (board.cells.index{|p| p == " "} + 1).to_s
       #  end
+=======
+        if board.turn_count == 0
+          "3"
+        elsif board.turn_count == 1 || board.turn_count == 2
+          binding.pry
+          attempt = 1
+          if attempt == 1
+            "5"
+            attempt += 1
+          else
+             (board.cells.index{|p| p == " "} + 1).to_s
+          end
+        else
+          (board.cells.index{|p| p == " "} + 1).to_s
+        end
+
+
+>>>>>>> e77259538409fa001e73c52723c8bb6e92ee872f
       end
   end
 end
