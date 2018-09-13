@@ -12,14 +12,14 @@ puts "2 - Two player game!"
 
 input = gets.chomp
 
-if input
-  case 0
+case input
+  when 0
     zero_player_game = Game.new(Computer.new("X"),Computer.new("O"))
     zero_player_game.play
-  case 1
+  when 1
     single_player_game_plays_first = Game.new(Human.new("X"),Computer.new("O"))
     single_player_game_plays_first.play
-  case 2
+  when 2
     two_player_game = Game.new(Human.new("X"),Human.new("O"))
     two_player_game.play
   else
