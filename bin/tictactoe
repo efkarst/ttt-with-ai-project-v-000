@@ -10,12 +10,37 @@ puts "0 - The computer plays itself!"
 puts "1 - You versus the computer!"
 puts "2 - Two player game!"
 
-input = gets.chomp
+number_of_players = gets.chomp
+
+if number_of_players == "1"
+  puts "Do you want to be 'X' or 'O'?"
+  token = input.chomp
+  
+  puts "Who should go first? Type 'me' or 'computer'."
+  first_player = input.chomp
+  
+elsif number_of_players == "2"
+  puts "Do you want to be 'X' or 'O'?"
+  token = input.chomp
+  
+  puts "Who should go first? Type 'me' or 'them'."
+  first_player = input.chomp
+
+elsif number_of_players == "0"
+  puts "Who should go first, 'X' or 'O'?"
+  token1 = input.chomp
+  token1 == "X" ? token2 = "O" : token2 = "X"
+
+  new_game = Game.new(Computer.new(token1),Computer.new(token2))
+  
+else
+  puts "Oops, I didn't get that! Please enter '0', '1' or '2'."
+end
+  
 
 case input
   when "0"
-    zero_player_game = Game.new(Computer.new("X"),Computer.new("O"))
-    zero_player_game.play
+    new_game = Game.new(Computer.new("X"),Computer.new("O"))
   when "1"
     single_player_game_plays_first = Game.new(Human.new("X"),Computer.new("O"))
     single_player_game_plays_first.play
