@@ -12,7 +12,7 @@ puts "2 - Two player game!"
 
 number_of_players = gets.chomp
 
-if number_of_players == "1" 
+if number_of_players == "1"
   puts "Do you want to be 'X' or 'O'?"
   token1 = gets.chomp
   token1 == "X" ? token2 = "O" : token2 = "X"
@@ -54,4 +54,5 @@ else
   puts "Oops, I didn't get that! Please enter '0', '1' or '2'."
 end
 
-
+new_game = Game.new(player_1,player_2)
+new_game.play
