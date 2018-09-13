@@ -16,7 +16,8 @@ if number_of_players == "1"
   puts "Do you want to be 'X' or 'O'?"
   token1 = gets.chomp
   token1 == "X" ? token2 = "O" : token2 = "X"
-
+  puts "you chose #{token1} and the computer is #{token2}"
+  
   puts "Who should go first? Type 'me' or 'them'."
   first_player = gets.chomp
   if first_player == "me"
