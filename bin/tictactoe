@@ -16,13 +16,13 @@ if number_of_players == "1"
   puts "Do you want to be 'X' or 'O'?"
   token1 = gets.chomp
   token1 == "X" ? token2 = "O" : token2 = "X"
-  puts "you chose #{token1} and the computer is #{token2}"
-  
-  puts "Who should go first? Type 'me' or 'them'."
+    puts "Who should go first? Type 'me' or 'them'."
   first_player = gets.chomp
   if first_player == "me"
     player_1 = Human.new(token1)
     player_2 = Computer.new(token2)
+
+    puts "you said #{first_player} first, and player 1 is #{player_1.class} and player 2 is #{player_2.class}"
   else
     player_1 = Computer.new(token2)
     player_2 = Human.new(token1)
