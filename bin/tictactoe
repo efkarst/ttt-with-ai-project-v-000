@@ -3,6 +3,8 @@
 require_relative '../config/environment'
 include Players
 
+puts "Welcome to Tic Tac Toe!"
+
 zero_player_game = Game.new(Computer.new("X"),Computer.new("O"))
 single_player_game_plays_first = Game.new(Human.new("X"),Computer.new("O"))
 single_player_game_plays_second = Game.new(Computer.new("X"),Human.new("O"))
